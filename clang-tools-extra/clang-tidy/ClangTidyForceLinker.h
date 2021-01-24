@@ -15,6 +15,11 @@
 namespace clang {
 namespace tidy {
 
+// This anchor is used to force the linker to link the AutosarModule.
+extern volatile int AutosarModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED AutosarModuleAnchorDestination =
+    AutosarModuleAnchorSource;
+
 // This anchor is used to force the linker to link the AbseilModule.
 extern volatile int AbseilModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED AbseilModuleAnchorDestination =

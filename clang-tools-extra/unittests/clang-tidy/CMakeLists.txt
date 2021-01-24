@@ -38,6 +38,7 @@ clang_target_link_libraries(ClangTidyTests
 target_link_libraries(ClangTidyTests
   PRIVATE
   clangTidy
+  clangTidyAutosarModule
   clangTidyAndroidModule
   clangTidyGoogleModule
   clangTidyLLVMModule
