@@ -9,6 +9,7 @@
 #include "../ClangTidy.h"
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
+#include "A2135HexConstantsUpperCaseCheck.h"
 #include "A391FixedWidthTypesCheck.h"
 #include "A5101PointerToVirtMemberCheck.h"
 #include "A524ReinterpretCastCheck.h"
@@ -22,6 +23,8 @@ namespace autosar {
 class AutosarModule : public ClangTidyModule {
 public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
+    CheckFactories.registerCheck<A2135HexConstantsUpperCaseCheck>(
+        "autosar-a2-13-5-hex-constants-upper-case");
     CheckFactories.registerCheck<A391FixedWidthTypesCheck>(
         "autosar-a3-9-1-fixed-width-types");
     CheckFactories.registerCheck<A5101PointerToVirtMemberCheck>(

@@ -22,6 +22,8 @@ namespace autosar {
 /// http://clang.llvm.org/extra/clang-tidy/checks/autosar-a5-2-4-reinterpret-cast.html
 class A524ReinterpretCastCheck : public ClangTidyCheck {
 public:
+  static constexpr const char *getCheckName() noexcept { return "autosar-a5-2-4-reinterpret-cast"; }
+
   A524ReinterpretCastCheck(StringRef Name, ClangTidyContext *Context)
       : ClangTidyCheck(Name, Context) {}
   void registerMatchers(ast_matchers::MatchFinder *Finder) override;

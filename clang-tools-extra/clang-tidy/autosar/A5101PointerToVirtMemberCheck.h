@@ -21,6 +21,8 @@ namespace autosar {
 /// http://clang.llvm.org/extra/clang-tidy/checks/autosar-a5-10-1-pointer-to-virt-member.html
 class A5101PointerToVirtMemberCheck : public ClangTidyCheck {
 public:
+  static constexpr const char *getCheckName() noexcept { return "autosar-a5-10-1-pointer-to-virt-member"; }
+
   A5101PointerToVirtMemberCheck(StringRef Name, ClangTidyContext *Context)
       : ClangTidyCheck(Name, Context) {}
   void registerMatchers(ast_matchers::MatchFinder *Finder) override;

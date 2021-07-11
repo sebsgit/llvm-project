@@ -4,6 +4,7 @@ set(LLVM_LINK_COMPONENTS
   )
 
 add_clang_library(clangTidyAutosarModule
+  A2135HexConstantsUpperCaseCheck.cpp
   A391FixedWidthTypesCheck.cpp
   A5101PointerToVirtMemberCheck.cpp
   A524ReinterpretCastCheck.cpp
